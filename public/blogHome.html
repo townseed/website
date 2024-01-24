@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BlogHome</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>
+        Blog Breakout Homepage
+    </h1>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Professional Projects')" id = "defaultOpen">Professional Topics</button>
+        <button class="tablinks" onclick="openTab(event, 'Personal Projects')">Personal Topics</button>
+        <button class="tablinks" onclick="openTab(event, 'Misc Thoughts')">Micilanious Topics</button>
+      </div>
+      
+      <!-- Tab content -->
+      <div id="Professional Projects" class="tabcontent">
+        <h3>Professional Projects</h3>
+        <p><a href= "pro-projects/breadMachine.html">The Bread Machine</a></p>
+      </div>
+      
+      <div id="Personal Projects" class="tabcontent">
+        <h3>Personal Projects</h3>
+        <p><a href = "per-projects/blogThoughts.html">Blog Thoughts</a></p>
+        <p><a href = "per-projects/StarBreaker.html">StarBreaker</a></p>
+      </div>
+      
+      <div id="Misc Thoughts" class="tabcontent">
+        <h3>Other Thoughts</h3>
+      </div>
+      <!-- js to get the tabs to work -->
+      <script>
+        document.getElementById("defaultOpen").click();
+        function openTab(evt, name) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(name).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        </script>
+ 
+</body>
+
+<footer>
+    <p>Always know you can go <a href="index.html">home</a></p>
+</footer>
+</html>
